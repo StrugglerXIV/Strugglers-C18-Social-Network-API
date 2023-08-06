@@ -1,4 +1,4 @@
-# Mongoose API Sample
+# Strugglers-C18-Social-Network-API
 
 This is a simple Mongoose API demo showcasing how to build and interact with a MongoDB database using Mongoose. The API allows you to perform CRUD operations on two main resources: `users` and `thoughts`. The API is designed to manage user data and their associated thoughts and reactions.
 
@@ -18,11 +18,11 @@ This is a simple Mongoose API demo showcasing how to build and interact with a M
 
 ## Installation
 
-1. Clone the repo in your local machine.
+1. Clone the repo on your local machine.
 
-2.Run "npm i" to install all required packages.
+2. Run "npm i" to install all required packages.
 
-3.User the POST, GET and DELETE routes in Insomnia.
+3. User the POST, GET and DELETE routes in Insomnia.
 
 ## Usage
 
@@ -59,7 +59,7 @@ The project uses the following major dependencies:
 
 ## Contributing
 
-The Amazing staff at the UCF coding bootcamp
+The Amazing staff at the UCF coding boot camp.
 
 ## License
 
