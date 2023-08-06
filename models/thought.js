@@ -19,19 +19,16 @@ const ThoughtSchema = new Schema(
       type: String,
       required: true,
     },
-    // Use ReactionsSchema to validate data for a reply
     reactions: [reactionSchema],
   },
   {
     toJSON: {
       virtuals: true,
     },
-    // prevents virtuals from creating duplicate of _id as `id`
     id: false,
   }
 );
 
-// get total count of reactions and replies on retrieval
 ThoughtSchema.virtual("reactionCount").get(function () {
   return this.reactions.length;
 });

@@ -10,7 +10,7 @@ const userController = {
             res.status(500).json(err);
         }
     },
-    async getSingleUsers(req, res) {
+    async getSingleUser(req, res) {
         try {
             const userData = await User.findOne({ _id: req.params.id })
                 .select("-__v")
@@ -26,7 +26,7 @@ const userController = {
             res.status(500).json(err);
         }
     },
-    async deleteSingleUsers(req, res) {
+    async deleteSingleUser(req, res) {
         try {
             const userData = await User.findOneAndDelete({ _id: req.params.id });
             if (!userData) {
@@ -51,6 +51,19 @@ const userController = {
             res.status(500).json(err);
         }
     },
+     async updateSingleUser(req, res) {
+    try {
+      const userData = await User.findOneAndUpdate(
+        { _id: req.params.id },
+        { $set: req.body },
+        { new: true, runValidators: true }
+      );
+      res.json(userData);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  },
     async addFriend(req, res) {
         try {
             const userData = await User.findOneAndUpdate(
