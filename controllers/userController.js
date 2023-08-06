@@ -39,17 +39,13 @@ const userController = {
         }
     },
     async createSingleUser(req, res) {
-        try {
-            const userData = await User.findOneAndUpdate(
-                { _id: req.params.id },
-                { $set: req.body },
-                { new: true, runValidators: true }
-            );
-            res.json(userData);
-        } catch (err) {
-            console.log(err);
-            res.status(500).json(err);
-        }
+      try {
+        const userData = await User.create(req.body);
+        res.json(userData);
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
     },
      async updateSingleUser(req, res) {
     try {
