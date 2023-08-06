@@ -14,7 +14,9 @@ This is a simple Mongoose API demo showcasing how to build and interact with a M
 - [License](#license)
 
 ## Links
+https://drive.google.com/file/d/12PW0t5BQ5SIVghW1Ny6YNJzUEk7XPAte/view
 
+https://github.com/StrugglerXIV/Strugglers-C18-Social-Network-API
 
 ## Installation
 
